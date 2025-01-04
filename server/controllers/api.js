@@ -28,7 +28,7 @@ async function getGoodsCats(req,res){
 	 
     let sql="SELECT * FROM type where level in (1,0) and sts='A'  order by seq,id"
     const types = await dao.query(sql);
-    sql="select goods_partno,goods_detail,market_price,model,model2,pos_display from sumgoods  where  model3_x is not null and model3_y is not null order by pos_seq ";
+    sql="select goods_partno,goods_detail,market_price,model,model2,pos_display from sumgoods  where  model3_x is not null and model3_y is not null order by pos_seq desc";
     let goods = await dao.query(sql);
 
     const catData = _.filter(types,{level:0}).map(e=>({
