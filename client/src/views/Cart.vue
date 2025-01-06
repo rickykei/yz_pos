@@ -405,7 +405,7 @@ export default {
           padding-top 10px
 
       .deactive
-        background #dddddd
+        background #000000 
 
   .pos-order
     padding 10px
